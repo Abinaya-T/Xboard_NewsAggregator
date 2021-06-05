@@ -1,0 +1,141 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
+  <title>Crio News Feed</title>
+  <meta name="description" content="Crio Feed Website" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="resources/css/index.css"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #aaaaaa;">
+    <a class="navbar-brand" href="#" style="font-family: Montserrat; font-weight: bold;">
+      <div class="rectangle"></div>Crio News Feed
+    </a>
+  </nav>
+  <div class="container mx-5">
+    <div class="row">
+    <div class="col-12">
+    <div class="content mt-4">
+      <h6 style="font-family: Montserrat, sans-serif; font-size: larger; font-weight: bolder;">Today</h6>
+      <p class="subtitle">Insights you need to keep ahead</p>
+    </div>
+  </div>
+    <div class="col-10">
+    <div class="accordion w-100 mx-3" id="accordion">
+      <div class="card accordion-card mb-0">
+        <div class="card-header mb-0" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn shadow-none" id="btn-topic-one" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div id="carouselControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="innerCarouselOne">
+              <!-- carousel Content -->
+            </div>
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="card mb-0">
+        <div class="card-header mb-0" id="headingTwo">
+          <h5 class="mb-0">
+            <!-- <i class="fa fa-angle-down"></i> -->
+            <button class="btn collapsed shadow-none" id="btn-topic-two" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div id="carouselControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="innerCarouselTwo">
+              <!-- carousel Content -->
+            </div>
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-0">
+        <div class="card-header mb-0" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn collapsed shadow-none" id="btn-topic-three" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div id="carouselControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="innerCarouselThree">
+              <!-- carousel Content -->
+            </div>
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  
+  <script type="text/javascript" src="resources/data/magazines.js"></script>
+  <script type="text/javascript" src="resources/js/index.js"></script>
+  <script type="text/javascript" src="resources/js/entry.js"></script>
+  
+
+  <!-- <script type="module">
+    import { fetchTopics, addTopicsToDOM } from "./resources/js/index.js";
+    import  magazines from "./resources/data/magazines.js";
+    //entry point (executed when DOM is loaded)
+    (async function () {
+      // init();
+      let topic1 = await fetchTopics(magazines[0]);
+      addTopicsToDOM(topic1, "innerCarouselOne", "btn-topic-one");
+      let topic2 = await fetchTopics(magazines[1]);
+      addTopicsToDOM(topic2, "innerCarouselTwo", "btn-topic-two");
+      let topic3 = await fetchTopics(magazines[2]);
+      addTopicsToDOM(topic3, "innerCarouselThree", "btn-topic-three");
+    })();
+  </script> -->
+  <!-- <script type="module">
+    import {init} from "./resources/js/index.js";
+    (async function(){
+      init();
+    }
+    )();
+  </script> -->
+
+</body>
+
+</html>
